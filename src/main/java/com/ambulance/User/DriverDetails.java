@@ -9,8 +9,8 @@ public class DriverDetails {
     int age;
     String hospital_name;
     String ambulance_number;
-    Location driverlocation = new Location();
-    public String Details(){
+     public Location driverlocation = new Location();
+    public String toString(){
         return name+" "+mail+" "+passkey+" "+phone_no+" "+String.valueOf(age)+" "+hospital_name+" "+ambulance_number;
     }
     

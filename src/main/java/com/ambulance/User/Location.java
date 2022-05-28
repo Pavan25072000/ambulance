@@ -1,7 +1,7 @@
 package com.ambulance.User;
 
 public class Location {
-    float longitude;
-    float lattitude;
+   public float longitude;
+   public float lattitude;
     
 }

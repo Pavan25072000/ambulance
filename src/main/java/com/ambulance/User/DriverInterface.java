@@ -6,12 +6,13 @@ import java.util.ArrayList;
 
 public class DriverInterface {
     Scanner sc = new Scanner(System.in);
-   public List<DriverDetails> driverstorage;
+    public List<DriverDetails> driverstorage;
 
     public DriverInterface() {
         driverstorage = new ArrayList<>();
     }
-    DriverDetails driverdetails = new DriverDetails();
+
+    public DriverDetails driverdetails = new DriverDetails();
 
     public void Driver_signup() {
         System.out.println("enter your name");
@@ -35,40 +36,39 @@ public class DriverInterface {
         driverstorage.add(driverdetails);
     }
 
-    public void Driver_login() {
+    public boolean Driver_login() {
         String mail = sc.next();
         String passkey = sc.next();
         for (int i = 0; i < driverstorage.size(); i++) {
             if (mail.equals(driverstorage.get(i).mail) && passkey.equals(driverstorage.get(i).passkey)) {
-                System.out.println("Access Accepted");
-                while(true){
-                System.out.println("please enter  location or menu");
-                String location = sc.nextLine();
-                if(location.equals("location")){
-                    System.out.println("enter your location with a referance of  longitude");
-                    driverdetails.driverlocation.longitude = sc.nextFloat();
-                    System.out.println("enter your location with a referance of  lattitude");
-                    driverdetails.driverlocation.lattitude = sc.nextFloat();
-                }
-                if(location.equals("menu")){
-                    continue;
-                }
-                else{
-                    System.out.println("sorry we didnot have your option");
-                }
+            return true;
+            }
+        } 
+            return false;
+    }
+
+
+
+    public List<DriverDetails> shortest_distance() {
+        List<DriverDetails> output = new ArrayList<>();
+        for (int i = 0; i < driverstorage.size(); i++) {
+            System.out.println("enter your location with a referance of  lattitude");
+            float lattitude = sc.nextFloat();
+            System.out.println("enter your location with a referance of  longitude");
+            float longitude = sc.nextFloat();
+            System.out.println("enter your maximum range to book a ambulance ");
+            float maximum_distance = sc.nextFloat();
+            float latt = lattitude - driverstorage.get(i).driverlocation.lattitude;
+            float longi = longitude - driverstorage.get(i).driverlocation.longitude;
+            double place = (latt * latt) + (longi * longi);
+            double root = Math.sqrt(place);
+            if (root <= maximum_distance) {
+                output.add(driverstorage.get(i));
             }
 
-            } else {
-                System.out.println("Access denied");
-            }
         }
+        return output;
+
     }
-    public List<DriverDetails> shortest_distance(){
-        for(int i=0 ; i<driverstorage.size();i++)
-        
-        return null;
-        
-    }
-    
 
 }
