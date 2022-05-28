@@ -36,9 +36,7 @@ public final class App {
                         lattitude = scan.nextFloat();
                         System.out.println("enter your longitude");
                         longitude = scan.nextFloat();
-                        while(true){
-                            
-                        }
+                        for(int i=0;i<DriverInterface.driverstorage.size();)
 
                     }
                     if (sign_up.equals("menu")) {

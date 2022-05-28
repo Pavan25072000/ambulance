@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class DriverInterface {
     Scanner sc = new Scanner(System.in);
-    List<DriverDetails> driverstorage;
+   public List<DriverDetails> driverstorage;
 
     public DriverInterface() {
         driverstorage = new ArrayList<>();
@@ -33,7 +33,6 @@ public class DriverInterface {
         System.out.println("enter your location with a referance of  lattitude");
         driverdetails.driverlocation.lattitude = sc.nextFloat();
         driverstorage.add(driverdetails);
-
     }
 
     public void Driver_login() {
@@ -64,5 +63,12 @@ public class DriverInterface {
             }
         }
     }
+    public List<DriverDetails> shortest_distance(){
+        for(int i=0 ; i<driverstorage.size();i++)
+        
+        return null;
+        
+    }
+    
 
 }

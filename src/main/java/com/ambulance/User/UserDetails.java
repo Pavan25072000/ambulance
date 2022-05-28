@@ -13,7 +13,9 @@ public class UserDetails {
     String phone_no;
     // System.out.print("enter your age");
     int age;
-    
+    float lattitude;
+    float longitude;
+    float maximum_distance;
 
     // }
     public static int givendetails;
