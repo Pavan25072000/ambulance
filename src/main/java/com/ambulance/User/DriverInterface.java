@@ -7,14 +7,40 @@ import java.util.ArrayList;
 public class DriverInterface {
     Scanner sc = new Scanner(System.in);
     public List<DriverDetails> driverstorage;
+    public DriverDetails driverdetails;
 
     public DriverInterface() {
-        driverstorage = new ArrayList<>();
+        // driverdetails = new DriverDetails();
+        // driverstorage = new ArrayList<>();
+        // driverdetails.name = "naveen";
+        // driverdetails.age = 24;
+        // driverdetails.ambulance_number ="KD01EQ1866";
+        // driverdetails.driverlocation.lattitude = 9;
+        // driverdetails.driverlocation.lattitude = 15;
+        // driverdetails.hospital_name = "Rainbow Hospital";
+        // driverdetails.name = "n@gmail.com";
+        // driverdetails.passkey = "7019";
+        // driverdetails.phone_no = "9019462109";
+        // driverstorage.add(driverdetails);
+
+        // driverdetails = new DriverDetails();
+        // driverstorage = new ArrayList<>();
+        // driverdetails.name = "yes";
+        // driverdetails.age = 24;
+        // driverdetails.ambulance_number ="KD01EQ1866";
+        // driverdetails.driverlocation.lattitude = 9;
+        // driverdetails.driverlocation.longitude = 10;
+        // driverdetails.hospital_name = "KGB Hospital";
+        // driverdetails.name = "n@gmail.com";
+        // driverdetails.passkey = "7019";
+        // driverdetails.phone_no = "9019462109";
+        // driverstorage.add(driverdetails);
     }
 
-    public DriverDetails driverdetails = new DriverDetails();
 
     public void Driver_signup() {
+        driverdetails = new DriverDetails();
+
         System.out.println("enter your name");
         driverdetails.name = sc.nextLine();
         System.out.println("enter your mail");

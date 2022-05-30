@@ -35,7 +35,7 @@ public final class App {
                         List<DriverDetails> nearest_service;
                         nearest_service = driverService.shortest_distance();
                         for (DriverDetails i : nearest_service) {
-                            System.out.print(i);
+                            System.out.println(i);
                         }
                     } else if (sign_up.equals("menu")) {
                         continue;
@@ -57,7 +57,7 @@ public final class App {
                             List<DriverDetails> nearest_service;
                             nearest_service = driverService.shortest_distance();
                             for (DriverDetails i : nearest_service) {
-                                System.out.print(i);
+                                System.out.println(i);
                             }
 
                         } else if (enter.equals("menu")) {
